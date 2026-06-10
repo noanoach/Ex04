@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Ex04.Menus.Interfaces.Interfaces
+﻿namespace Ex04.Menus.Interfaces.Interfaces
 {
-    internal class IMenuItemSelectedListener
+
+    // Represents an action that can be executed when a menu action item is selected.
+    public interface IMenuItemSelectedListener
     {
+        void MenuItemSelected();
     }
 }
