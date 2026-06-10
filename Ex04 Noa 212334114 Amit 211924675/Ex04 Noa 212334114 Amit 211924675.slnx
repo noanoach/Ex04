@@ -1,1 +1,5 @@
-<Solution />
+<Solution>
+  <Project Path="Ex04.Menus.Events/Ex04.Menus.Events.csproj" Id="dfe42c7b-f70d-45bd-b867-d31a95916e2b" />
+  <Project Path="Ex04.Menus.Interfaces/Ex04.Menus.Interfaces.csproj" Id="99f03076-5f2b-4cb9-9e80-a301805692ab" />
+  <Project Path="Ex04.Menus.Test/Ex04.Menus.Test.csproj" Id="41cdeaf6-dd49-4640-93ee-e279dd152e37" />
+</Solution>
