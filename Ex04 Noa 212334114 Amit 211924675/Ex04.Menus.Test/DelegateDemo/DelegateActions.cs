@@ -1,0 +1,42 @@
+﻿using System;
+
+namespace Ex04.Menus.Test.DelegateDemo
+{
+    internal static class DelegateActions
+    {
+        public static void ShowCurrentDate()
+        {
+            Console.WriteLine(DateTime.Now.ToShortDateString());
+        }
+
+        public static void ShowCurrentTime()
+        {
+            Console.WriteLine(DateTime.Now.ToLongTimeString());
+        }
+
+        public static void CountCapitals()
+        {
+            Console.WriteLine("Please enter a sentence:");
+            string input = Console.ReadLine();
+
+            int capitalsCount = 0;
+
+            foreach (char currentChar in input)
+            {
+                if (char.IsUpper(currentChar))
+                {
+                    capitalsCount++;
+                }
+            }
+
+            Console.WriteLine(
+                "There are {0} capital letters in your sentence.",
+                capitalsCount);
+        }
+
+        public static void ShowVersion()
+        {
+            Console.WriteLine("Version: 26.2.4.7310");
+        }
+    }
+}
