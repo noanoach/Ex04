@@ -2,9 +2,26 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ex04.Menus.Events.MenuItem
+
+namespace Ex04.Menus.Events
 {
-    internal class MenuItem
+    public abstract class MenuItem
     {
+        private readonly string r_Title;
+
+        protected MenuItem(string i_Title)
+        {
+            r_Title = i_Title;
+        }
+
+        public string Title
+        {
+            get
+            {
+                return r_Title;
+            }
+        }
+
+        internal abstract void Select();
     }
 }
