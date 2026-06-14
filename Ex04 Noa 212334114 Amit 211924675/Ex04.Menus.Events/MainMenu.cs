@@ -31,13 +31,13 @@ namespace Ex04.Menus.Events
 
             while (!shouldReturnToPreviousMenu)
             {
-                Console.Clear();
                 printMenu(i_CurrentMenu, i_IsRootMenu);
 
                 int userChoice = readValidChoice(i_CurrentMenu, i_IsRootMenu);
 
                 if (userChoice == 0)
                 {
+                    Console.Clear();
                     shouldReturnToPreviousMenu = true;
                 }
                 else
@@ -58,8 +58,6 @@ namespace Ex04.Menus.Events
             {
                 (i_SelectedMenuItem as MenuActionItem).Select();
                 Console.WriteLine();
-                Console.WriteLine("Press any key to continue...");
-                Console.ReadKey();
             }
         }
 
