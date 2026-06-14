@@ -50,15 +50,17 @@ namespace Ex04.Menus.Interfaces
 
         private void handleMenuItemSelection(MenuItem i_SelectedMenuItem)
         {
-            Console.Clear();
+            MenuSubMenuItem selectedSubMenuItem = i_SelectedMenuItem as MenuSubMenuItem;
+            MenuActionItem selectedActionItem = i_SelectedMenuItem as MenuActionItem;
 
-            if (i_SelectedMenuItem is MenuSubMenuItem)
+            if (selectedSubMenuItem != null)
             {
-                showMenu(i_SelectedMenuItem as MenuSubMenuItem, false);
+                Console.Clear();
+                showMenu(selectedSubMenuItem, false);
             }
-            else if (i_SelectedMenuItem is MenuActionItem)
+            else if (selectedActionItem != null)
             {
-                (i_SelectedMenuItem as MenuActionItem).Select();
+                selectedActionItem.Select();
             }
         }
 

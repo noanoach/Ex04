@@ -6,9 +6,9 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Ex04.Menus.Events\Ex04.Menus.Events.csproj" />
-    <ProjectReference Include="..\Ex04.Menus.Interfaces\Ex04.Menus.Interfaces.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Ex04.Menus.Events\Ex04.Menus.Events.csproj" />
+		<ProjectReference Include="..\Ex04.Menus.Interfaces\Ex04.Menus.Interfaces.csproj" />
+	</ItemGroup>
 
 </Project>
