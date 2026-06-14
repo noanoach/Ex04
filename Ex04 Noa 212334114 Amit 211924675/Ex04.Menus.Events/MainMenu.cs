@@ -29,6 +29,8 @@ namespace Ex04.Menus.Events
         {
             bool shouldReturnToPreviousMenu = false;
 
+            Console.Clear();
+
             while (!shouldReturnToPreviousMenu)
             {
                 printMenu(i_CurrentMenu, i_IsRootMenu);
@@ -52,6 +54,7 @@ namespace Ex04.Menus.Events
 
             if (i_SelectedMenuItem is MenuSubMenuItem)
             {
+                Console.Clear();
                 showMenu(i_SelectedMenuItem as MenuSubMenuItem, false);
             }
             else if (i_SelectedMenuItem is MenuActionItem)
