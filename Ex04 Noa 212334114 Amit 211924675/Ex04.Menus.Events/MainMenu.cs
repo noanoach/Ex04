@@ -49,7 +49,6 @@ namespace Ex04.Menus.Events
 
         private void handleMenuItemSelection(MenuItem i_SelectedMenuItem)
         {
-            Console.Clear();
 
             if (i_SelectedMenuItem is MenuSubMenuItem)
             {
