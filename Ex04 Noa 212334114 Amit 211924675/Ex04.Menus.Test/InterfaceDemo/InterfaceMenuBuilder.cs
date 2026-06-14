@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Ex04.Menus.Interfaces;
+﻿using Ex04.Menus.Interfaces;
 using Ex04.Menus.Interfaces.MenuItems;
-using Ex04.Menus.Test.InterfaceDemo;
 
 namespace Ex04.Menus.Test.InterfaceDemo
 {
-    internal class InterfaceMenuBuilder
+    internal static class InterfaceMenuBuilder
     {
-
-        public static MainMenu buildInterfacesMenu()
+        public static MainMenu BuildMenu()
         {
             MainMenu interfacesMainMenu = new MainMenu("Interfaces Main Menu");
 

@@ -22,7 +22,7 @@ namespace Ex04.Menus.Test
         private static void runInterfacesMenu()
         {
             Ex04.Menus.Interfaces.MainMenu interfacesMainMenu = 
-                InterfaceMenuBuilder.buildInterfacesMenu();
+                InterfaceMenuBuilder.BuildMenu();
 
             interfacesMainMenu.Show();
         }

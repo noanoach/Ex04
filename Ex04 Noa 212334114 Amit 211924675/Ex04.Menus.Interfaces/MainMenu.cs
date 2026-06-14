@@ -23,7 +23,9 @@ namespace Ex04.Menus.Interfaces
 
         public void Show()
         {
-            showMenu(r_RootMenu, true);
+            const bool v_IsRootMenu = true;
+
+            showMenu(r_RootMenu, v_IsRootMenu);
         }
 
         private void showMenu(MenuSubMenuItem i_CurrentMenu, bool i_IsRootMenu)
@@ -50,10 +52,12 @@ namespace Ex04.Menus.Interfaces
 
         private void handleMenuItemSelection(MenuItem i_SelectedMenuItem)
         {
+            const bool v_IsRootMenu = true;
+
             if (i_SelectedMenuItem is MenuSubMenuItem selectedSubMenuItem)
             {
                 Console.Clear();
-                showMenu(selectedSubMenuItem, false);
+                showMenu(selectedSubMenuItem, !v_IsRootMenu);
             }
             else if (i_SelectedMenuItem is MenuActionItem selectedActionItem)
             {
@@ -109,7 +113,7 @@ namespace Ex04.Menus.Interfaces
 
             while (!isValidChoice)
             {
-                string userInput = Console.ReadLine();
+                string userInput = Console.ReadLine() ?? string.Empty;
 
                 if (int.TryParse(userInput, out userChoice) && userChoice >= 0 && userChoice <= i_CurrentMenu.MenuItems.Count)
                 {

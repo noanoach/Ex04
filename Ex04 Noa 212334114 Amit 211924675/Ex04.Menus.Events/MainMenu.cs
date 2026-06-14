@@ -1,5 +1,4 @@
 ﻿using System;
-using Ex04.Menus.Events;
 
 namespace Ex04.Menus.Events
 {
@@ -22,7 +21,9 @@ namespace Ex04.Menus.Events
 
         public void Show()
         {
-            showMenu(r_RootMenu, true);
+            const bool v_IsRootMenu = true;
+
+            showMenu(r_RootMenu, v_IsRootMenu);
         }
 
         private void showMenu(MenuSubMenuItem i_CurrentMenu, bool i_IsRootMenu)
@@ -49,14 +50,16 @@ namespace Ex04.Menus.Events
 
         private void handleMenuItemSelection(MenuItem i_SelectedMenuItem)
         {
+            const bool v_IsRootMenu = true;
 
-            if (i_SelectedMenuItem is MenuSubMenuItem)
+            if (i_SelectedMenuItem is MenuSubMenuItem selectedSubMenuItem)
             {
-                showMenu(i_SelectedMenuItem as MenuSubMenuItem, false);
+                Console.Clear();
+                showMenu(selectedSubMenuItem, !v_IsRootMenu);
             }
-            else if (i_SelectedMenuItem is MenuActionItem)
+            else if (i_SelectedMenuItem is MenuActionItem selectedActionItem)
             {
-                (i_SelectedMenuItem as MenuActionItem).Select();
+                selectedActionItem.Select();
                 Console.WriteLine();
             }
         }
@@ -109,7 +112,7 @@ namespace Ex04.Menus.Events
 
             while (!isValidChoice)
             {
-                string userInput = Console.ReadLine();
+                string userInput = Console.ReadLine() ?? string.Empty;
 
                 if (int.TryParse(userInput, out userChoice) && userChoice >= 0 && userChoice <= i_CurrentMenu.MenuItems.Count)
                 {

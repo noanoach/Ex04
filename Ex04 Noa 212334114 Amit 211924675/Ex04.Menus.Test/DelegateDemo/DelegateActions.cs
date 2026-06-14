@@ -16,14 +16,16 @@ namespace Ex04.Menus.Test.DelegateDemo
 
         public static void CountCapitals()
         {
-            string input = Console.ReadLine();
+            Console.WriteLine("Please enter a sentence:");
+
+            string input = Console.ReadLine() ?? string.Empty;
             int capitalsCount = 0;
 
             foreach (char currentChar in input)
             {
                 if (char.IsUpper(currentChar))
                 {
-                    capitalsCount++;
+                    ++capitalsCount;
                 }
             }
 
