@@ -6,19 +6,17 @@ namespace Ex04.Menus.Test.DelegateDemo
     {
         public static void ShowCurrentDate()
         {
-            Console.WriteLine(DateTime.Now.ToShortDateString());
+            Console.WriteLine("> Current Date is {0}", DateTime.Now.ToShortDateString());
         }
 
         public static void ShowCurrentTime()
         {
-            Console.WriteLine(DateTime.Now.ToLongTimeString());
+            Console.WriteLine("> Current Time is {0}", DateTime.Now.ToLongTimeString());
         }
 
         public static void CountCapitals()
         {
-            Console.WriteLine("Please enter a sentence:");
             string input = Console.ReadLine();
-
             int capitalsCount = 0;
 
             foreach (char currentChar in input)
@@ -30,13 +28,13 @@ namespace Ex04.Menus.Test.DelegateDemo
             }
 
             Console.WriteLine(
-                "There are {0} capital letters in your sentence.",
+                "There are {0} capital letters in your text.",
                 capitalsCount);
         }
 
         public static void ShowVersion()
         {
-            Console.WriteLine("Version: 26.2.4.7310");
+            Console.WriteLine("App Version: 26.2.4.7310");
         }
     }
 }
